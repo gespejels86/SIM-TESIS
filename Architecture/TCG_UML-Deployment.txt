@@ -1,0 +1,28 @@
+@startuml
+
+actor DEVELOPER
+actor TOOL_TUNNER
+
+Node ConfigurableParser
+Node TestCasesGenerator
+Node UserInterface
+artifact Configuration
+
+TestCasesGenerator <-down- ConfigurableParser : Abstract Syntax Tree (Graph)
+TestCasesGenerator -down-> UserInterface : Test Cases (List)
+
+UserInterface -right-> ConfigurableParser : Tokens Regular Expressions
+UserInterface -right-> ConfigurableParser : UMLet + TCG_UML Specific Grammar
+UserInterface -right-> ConfigurableParser : Activity Diagram UMLet Format
+UserInterface <-right- ConfigurableParser : Abstract Syntax Tree (Graph in GraphViz)
+
+UserInterface -left-> DEVELOPER : Test Cases
+UserInterface -left-> DEVELOPER : Abstract Syntax Tree
+
+DEVELOPER -right-> UserInterface : Activity Diagram UMLet Format
+
+TOOL_TUNNER -right-> Configuration : owner
+
+Configuration -down-> UserInterface : Setting
+
+@enduml
