@@ -11,7 +11,7 @@ artifact Configuration
 TestCasesGenerator <-down- ConfigurableParser : Abstract Syntax Tree (Graph)
 TestCasesGenerator -down-> UserInterface : Test Cases (List)
 
-UserInterface -right-> ConfigurableParser : Tokens Regular Expressions
+UserInterface -right-> ConfigurableParser : Regular Expressions
 UserInterface -right-> ConfigurableParser : UMLet + TCG_UML Specific Grammar
 UserInterface -right-> ConfigurableParser : Activity Diagram UMLet Format
 UserInterface <-right- ConfigurableParser : Abstract Syntax Tree (Graph in GraphViz)

@@ -1,0 +1,70 @@
+@startuml
+
+package RE2DFA {
+	
+	enum NODE_TYPE_e{
+		START
+		TRANSITIONING
+		END
+		START_END
+	}
+	
+	class EDGE{
+		- transitionCharacter: char
+		- nextNode : NODE
+		--
+		+ EDGE (char, NODE)
+	}
+	
+	class E_CLOSURE_EDGE{
+	
+	}
+	
+	class NODE{
+		- nodeType : NODE_TYPE
+		- edges : vector<EDGE>
+		- id : long long
+		- assignedSet : NODES_SET
+		--
+		+ NODE ( NODE_TYPE, long long )
+		
+	}
+	
+	class E_CLOSURE_NODE{
+		- nfaNodes : vector<NODE>
+	}
+	
+	class GRAPH {
+		- startNode : NODE
+		--
+		+ GRAPH(NODE)
+	}
+	class NFA_GRAPH{
+		- endNode : NODE
+		--
+		+ NFA_GRAPH(NODE,NODE)
+	}
+	
+	class DFA_GRAPH{
+	
+	}
+	
+	class RE2DFA{
+		
+	}
+	
+	class E_CLOSURE_GRAPH{
+	
+	}
+}
+
+
+E_CLOSURE_EDGE -up-|> EDGE
+
+E_CLOSURE_NODE -up-|> NODE
+
+NFA_GRAPH -up-|> GRAPH
+DFA_GRAPH -up-|> GRAPH
+E_CLOSURE_GRAPH -up-|> GRAPH
+
+@enduml

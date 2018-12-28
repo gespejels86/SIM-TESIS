@@ -45,6 +45,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\AreEdgesEquivalent.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\AreNodesEquivalent.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\ContainsEdge.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Get_DFAFromDFASets.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Get_DFAGraphFromEClosureGraph.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\IsNodeEquivalentToASet.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\NODES_SET.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Perform_DFAMinimization.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Perform_SetSplitting.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\SetInicialSetSplitting.cs" />
+    <Compile Include="ConfigurableParser\Lexer\EDGE.cs" />
+    <Compile Include="ConfigurableParser\Lexer\E_CLOSURE_GRAPH\E_CLOSURE_NODE.cs" />
+    <Compile Include="ConfigurableParser\Lexer\E_CLOSURE_GRAPH\Get_EClosureNode.cs" />
+    <Compile Include="ConfigurableParser\Lexer\E_CLOSURE_GRAPH\Perform_EClosureOperation.cs" />
+    <Compile Include="ConfigurableParser\Lexer\E_CLOSURE_GRAPH\Perform_MoveToOperation.cs" />
+    <Compile Include="ConfigurableParser\Lexer\GENERALS\CONSTANTS.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH.cs" />
+    <Compile Include="ConfigurableParser\Lexer\E_CLOSURE_GRAPH.cs" />
+    <Compile Include="ConfigurableParser\Lexer\LEXER\getGraphsFromRegularExpresions.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Create_NFAUnion.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Create_NFAKleeneClosure.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Create_NFAConcatenation.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Get_NFAFromRE.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Create_NFAOneChar.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Process_GroupingSymbol.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Process_SkippingSymbol.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Process_SequencingSymbol.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Process_ConcatenationSymbol.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Process_KleeneClosureSymbol.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Process_UnionSymbol.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NODE.cs" />
+    <Compile Include="ConfigurableParser\Lexer\LEXER.cs" />
+    <Compile Include="ConfigurableParser\Lexer\NODE\NODE_TYPEcs.cs" />
+    <Compile Include="ConfigurableParser\Lexer\LEXER\DrawGraph.cs" />
+    <Compile Include="ConfigurableParser\Lexer\REG_EXP.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConfigurableParser\Lexer\EDGE\" />
+    <Folder Include="ConfigurableParser\SyntaxAnalyzer\" />
+    <Folder Include="TestCasesGenerator\" />
+    <Folder Include="UserInterface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

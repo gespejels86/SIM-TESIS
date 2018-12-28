@@ -1,0 +1,21 @@
+@startuml
+
+package ConfigurableParser {
+	node LEXER
+	node SYNTAX_ANALYZER 
+}
+
+node UserInterface
+node TestCasesGenerator
+
+LEXER -right-> SYNTAX_ANALYZER : Tokens List
+
+UserInterface --> LEXER : Activity Diagram UMLet Format
+UserInterface --> LEXER : Regular Expressions
+UserInterface --> SYNTAX_ANALYZER : UMLet + TCG_UML Specific Grammar
+
+SYNTAX_ANALYZER --> UserInterface : Abstract Syntax Tree (Graph in GraphViz)
+
+SYNTAX_ANALYZER --> TestCasesGenerator : Abstract Syntax Tree (Graph)
+
+@enduml

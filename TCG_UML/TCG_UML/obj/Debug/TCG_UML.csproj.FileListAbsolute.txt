@@ -1,0 +1,8 @@
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\bin\Debug\TCG_UML.exe.config
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\bin\Debug\TCG_UML.exe
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\bin\Debug\TCG_UML.pdb
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\obj\Debug\TCG_UML.Form1.resources
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\obj\Debug\TCG_UML.Properties.Resources.resources
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\obj\Debug\TCG_UML.csproj.GenerateResource.Cache
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\obj\Debug\TCG_UML.exe
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML\obj\Debug\TCG_UML.pdb

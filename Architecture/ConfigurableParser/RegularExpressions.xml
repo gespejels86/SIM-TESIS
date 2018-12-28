@@ -1,0 +1,6 @@
+<?xml version='1.0' ?>
+<regular_expressions>
+	<decimal_number>abc</decimal_number>
+	<integer_number>abc|ad</integer_number>
+	<number>abc|adef</number>
+</regular_expressions>
