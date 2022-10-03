@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TCG_UML</RootNamespace>
     <AssemblyName>TCG_UML</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +54,7 @@
     <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\IsNodeEquivalentToASet.cs" />
     <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\NODES_SET.cs" />
     <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Perform_DFAMinimization.cs" />
+    <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Perform_EdgesOptimization.cs" />
     <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\Perform_SetSplitting.cs" />
     <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH\SetInicialSetSplitting.cs" />
     <Compile Include="ConfigurableParser\Lexer\EDGE.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="ConfigurableParser\Lexer\DFA_GRAPH.cs" />
     <Compile Include="ConfigurableParser\Lexer\E_CLOSURE_GRAPH.cs" />
     <Compile Include="ConfigurableParser\Lexer\LEXER\getGraphsFromRegularExpresions.cs" />
+    <Compile Include="ConfigurableParser\Lexer\LEXER\Tokenaize.cs" />
     <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH.cs" />
     <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Create_NFAUnion.cs" />
     <Compile Include="ConfigurableParser\Lexer\NFA_GRAPH\Create_NFAKleeneClosure.cs" />
@@ -81,16 +84,73 @@
     <Compile Include="ConfigurableParser\Lexer\NODE\NODE_TYPEcs.cs" />
     <Compile Include="ConfigurableParser\Lexer\LEXER\DrawGraph.cs" />
     <Compile Include="ConfigurableParser\Lexer\REG_EXP.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\CFG.cs" />
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\DERIVATION.cs" />
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\PRODUCTION.cs" />
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\SYMBOL.cs" />
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\SYNTAX_TREE.cs" />
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\SYNTAX_TREE_NODE.cs" />
+    <Compile Include="ConfigurableParser\SyntaxAnalyzer\SYNTAX_ANALIZER.cs" />
+    <Compile Include="UserInterface\NewProjectForm\CancelButton_Click.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserInterface\NewProjectForm\NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\NewProjectForm\NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\LogViewForm\LogViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\LogViewForm\LogViewForm.Designer.cs">
+      <DependentUpon>LogViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\NewProjectForm\OKButton_Click.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\NewProjectForm\SearchButton_Click.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ProjectForm\ProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ProjectForm\ProjectForm.Designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\MainGUI\MainGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\MainGUI\MainGUI.Designer.cs">
+      <DependentUpon>MainGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserInterface\TreeProjectViewForm\TreeProjectViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\TreeProjectViewForm\TreeProjectViewForm.Designer.cs">
+      <DependentUpon>TreeProjectViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Project\Project.cs" />
+    <Compile Include="Workspace\Project\SetName.cs" />
+    <Compile Include="ConfigurableParser\Lexer\TOKEN.cs" />
+    <Compile Include="Workspace\WorkspaceHandler\CreateProject.cs" />
+    <Compile Include="Workspace\WorkspaceHandler\CreateWorkspace.cs" />
+    <Compile Include="Workspace\WorkspaceHandler\GetWorkspaceContext.cs" />
+    <Compile Include="Workspace\WorkspaceHandler\LoadWorkspace.cs" />
+    <Compile Include="Workspace\WorkspaceHandler\WorkspaceHandler.cs" />
+    <EmbeddedResource Include="UserInterface\LogViewForm\LogViewForm.resx">
+      <DependentUpon>LogViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\MainGUI\MainGUI.resx">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\NewProjectForm\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ProjectForm\ProjectForm.resx">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,7 +160,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserInterface\TreeProjectViewForm\TreeProjectViewForm.resx">
+      <DependentUpon>TreeProjectViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,9 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ConfigurableParser\Lexer\EDGE\" />
-    <Folder Include="ConfigurableParser\SyntaxAnalyzer\" />
     <Folder Include="TestCasesGenerator\" />
-    <Folder Include="UserInterface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

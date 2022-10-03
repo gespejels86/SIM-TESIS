@@ -37,7 +37,9 @@ namespace TCG_UML.ConfigurableParser.Lexer
                         }
 
                         if (Nodes_it.nodeType == NODE_TYPE.END)
+                        {
                             localDFANodes[DFASets_it.id].nodeType = NODE_TYPE.END;
+                        }
                     }
                 }
 

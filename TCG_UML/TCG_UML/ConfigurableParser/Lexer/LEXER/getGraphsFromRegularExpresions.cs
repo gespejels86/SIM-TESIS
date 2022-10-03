@@ -16,7 +16,7 @@ namespace TCG_UML.ConfigurableParser.Lexer
             foreach (XmlNode regEx in regExs)
             {
 
-                REG_EXP newRegExp = new REG_EXP(regEx.InnerText);
+                REG_EXP newRegExp = new REG_EXP(regEx.InnerText, regEx.Attributes["ignore"].Value);
                 regularExpresions.Add(regEx.Name, newRegExp);
 
             }

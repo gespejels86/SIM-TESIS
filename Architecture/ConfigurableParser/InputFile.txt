@@ -1,0 +1,23 @@
+@startuml
+
+start
+
+if (Graphviz > A) then (yes)
+	if (Graphviz > A) then (yes)
+		:process1;
+	else (no)
+		:process2;
+	endif
+else (no)
+	:process2;
+endif
+
+if (Graphviz > A) then (yes)
+	:process1;
+else (no)
+	:process2;
+endif
+
+stop
+
+@enduml

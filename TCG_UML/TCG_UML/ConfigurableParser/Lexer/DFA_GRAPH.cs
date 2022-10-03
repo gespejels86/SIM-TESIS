@@ -19,6 +19,7 @@ namespace TCG_UML.ConfigurableParser.Lexer
 
                 Get_DFAGraphFromEClosureGraph(eClosureGraph);
                 Perform_DFAMinimization();
+                Perform_EdgesOptimization();
             }
             NODE.ClearCount();
             NODES_SET.ClearCount();

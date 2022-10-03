@@ -7,6 +7,7 @@ namespace TCG_UML.ConfigurableParser.Lexer
     {
         public NODE_TYPE nodeType;
         public List<EDGE> edges;
+        public Dictionary<char, NODE> edgesHash;
         public int NodeID = 0;
         protected static int NodesCounter = 0;
         public NODES_SET assignedSet;
@@ -35,6 +36,17 @@ namespace TCG_UML.ConfigurableParser.Lexer
         public static void ClearCount()
         {
             NodesCounter = 0;
+        }
+
+        public void Get_EdgesHash()
+        {
+
+            edgesHash = new Dictionary<char, NODE>();
+
+            foreach (EDGE edge in edges)
+            {
+                edgesHash.Add(edge.transitionCharacter, edge.nextNode);
+            }
         }
 
         public void Dispose()

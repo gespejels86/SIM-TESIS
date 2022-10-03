@@ -1,6 +1,27 @@
 <?xml version='1.0' ?>
 <regular_expressions>
-	<decimal_number>abc</decimal_number>
-	<integer_number>abc|ad</integer_number>
-	<number>abc|adef</number>
+	<comment ignore="yes" xml:space="preserve">//([A-Z]|[a-z]|[0-9]| |&#x9;|#|$|%|=|@|!{|}|,|`|~|&amp;|\*|\(|\)|'|?|.|:|;|_|\||^|/|+|\[|\]|"|-)*&#xD;&#xA;</comment>
+	<decimalnumber ignore="no">[0-9]*.[0-9][0-9]*</decimalnumber>
+	<integernumber ignore="no">[0-9][0-9]*</integernumber>
+	<identifier ignore="no">([a-z]|[A-Z]|_)([a-z]|[A-Z]|[0-9]|_)*</identifier>
+	<whitespace  ignore="yes" xml:space="preserve">( )( )*</whitespace>
+	<newline ignore="yes" xml:space="preserve">&#xD;&#xA;</newline>
+	<tab ignore="yes" xml:space="preserve">&#x9;</tab>
+	<colon ignore="no">:</colon>
+	<semicolon ignore="no">;</semicolon>
+	<twodots ignore="no">..</twodots>
+	<openbraket ignore="no">\[</openbraket>
+	<closebraket ignore="no">\]</closebraket>
+	<openparentesis ignore="no">\(</openparentesis>
+	<closeparentesis ignore="no">\)</closeparentesis>
+	<pipe ignore="no">\|</pipe>
+	<inverteddiagonal ignore="no">\\</inverteddiagonal>
+	<tilde ignore="no">~</tilde>
+	<lessthan ignore="no">&lt;</lessthan>
+	<greaterthan ignore="no">&gt;</greaterthan>
+	<equal ignore="no">==</equal>
+	<arrow ignore="no">-&gt;</arrow>
+	<openquestionmark ignore="no">?</openquestionmark>
+	<closequestionmark ignore="no">¿</closequestionmark>
+	<arroba ignore="no">@</arroba>
 </regular_expressions>

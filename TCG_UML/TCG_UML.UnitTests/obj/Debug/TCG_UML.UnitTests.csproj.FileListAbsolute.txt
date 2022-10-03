@@ -1,0 +1,1 @@
+C:\Users\Gustavo\Desktop\Maestria\GItHubProject\SIM-TESIS\TCG_UML\TCG_UML.UnitTests\obj\Debug\TCG_UML.UnitTests.csprojResolveAssemblyReference.cache
